@@ -1,0 +1,7 @@
+node_modules
+test/public/bower_components
+coverage
+*.log
+README.html
+CHANGELOG.html
+*temp*

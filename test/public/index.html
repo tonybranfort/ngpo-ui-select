@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="ngApp"> 
+<head>
+  <base href="/">    
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+
+  <script src=  "bower_components/angular-ui-select/dist/select.js"></script>
+  <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css">
+
+  <script src="./ng-app.js"></script>
+
+</head>
+<body> 
+
+  <div ng-controller="MyCtrl">
+
+  <br>
+
+  <p>Selected: <span>{{person.selected.name}}</span></p>
+  <ui-select ng-model="person.selected" 
+      ng-disabled="disabled" style="width: 300px;">
+    <ui-select-match 
+        allow-clear=true
+        placeholder="Select a person ...">
+        {{$select.selected.name}}
+    </ui-select-match>
+    <ui-select-choices repeat="person in people | filter: $select.search">
+      <div ng-bind-html="person.name | highlight: $select.search"></div>
+      <small>
+        email: {{person.email}}
+        age: <span ng-bind-html="''+person.age | highlight: $select.search"></span>
+      </small>
+    </ui-select-choices>
+  </ui-select>
+
+
+  <h3>Colors</h3>
+  <ui-select multiple 
+      ng-model="multipleDemo.colors" 
+      ng-disabled="disabled" 
+      style="width: 300px;">
+    <ui-select-match placeholder="Select colors...">{{$item}}</ui-select-match>
+    <ui-select-choices repeat="color in availableColors | filter:$select.search">
+      {{color}}
+    </ui-select-choices>
+  </ui-select>
+
+  <br>
+  <h3>Blankets</h3>
+  <div ng-repeat = "blanket in blankets">
+    <div>
+      <ui-select ng-model="blanket" 
+          ng-disabled="disabled" style="width: 300px;">
+        <ui-select-match 
+            allow-clear=true
+            placeholder="Select a color ...">
+            {{$select.selected}}
+        </ui-select-match>
+        <ui-select-choices repeat="color in availableColors | filter: $select.search">
+        <div ng-bind-html="color | highlight: $select.search"></div>
+        </ui-select-choices>
+      </ui-select>
+
+    </div>
+
+  </div>
+
+
+  <br>
+  <h3>Crayons</h3>
+  <div ng-repeat = "crayon in crayons">
+    <div>
+        <ui-select multiple 
+            ng-model="crayon" 
+            ng-disabled="disabled" 
+            style="width: 300px;">
+          <ui-select-match placeholder="Select colors...">{{$item}}</ui-select-match>
+          <ui-select-choices repeat="color in availableColors | filter:$select.search">
+            {{color}}
+          </ui-select-choices>
+        </ui-select>
+
+    </div>
+
+  </div>
+
+
+  </div>
+
+</body>
+
+</html

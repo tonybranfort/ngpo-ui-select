@@ -1,0 +1,32 @@
+{
+  "name": "ngpo-ui-select",
+  "version": "1.0.0",
+  "description": "AngularJS Protractor page object for angular-ui ui-select widget using ngpo template",
+  "main": "lib/index.js",
+  "dependencies": {
+    "ngpo": "1.0.x"
+  },
+  "devDependencies": {
+    "express": "4.13.x",
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonybranfort/ngpo-ui-select"
+  },
+  "keywords": [
+    "ngpo",
+    "angular",
+    "anguarjs",
+    "protractor",
+    "page-objects",
+    "ui-select"
+  ],
+  "author": "Tony Branfort",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonybranfort/ngpo-ui-select/issues"
+  },
+  "homepage": "https://github.com/tonybranfort/ngpo-ui-select#readme"
+}
