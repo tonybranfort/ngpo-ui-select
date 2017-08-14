@@ -1,15 +1,21 @@
 # ngpo-ui-select
-AngularJS Protractor Page Object for [angular-ui ui-select](https://github.com/angular-ui/ui-select) using [ngpo](https://github.com/tonybranfort/ngpo).
+Create page objects with helper functions for [AngularJs Protractor](http://www.protractortest.org/#/) tests for [angular-ui ui-select](https://github.com/angular-ui/ui-select) using [ngpo](https://github.com/tonybranfort/ngpo).
 
-* `makeUiSelectPo` returns a protractor element that has these methods (other element methods not impacted) 
-    - enterValue(value)
-    - getValue()
-    - clear()
-* `makeUiSelectMultiPo` returns a protractor element that has these methods (other element methods not impacted) 
-    - enterValue(value)
-    - getValue() Gets string with all values; suggest expect(...).toContain(); 
-    - clear()
+* `makeUiSelectPo` returns a protractor element that has these methods (all other Protractor methods are available and not impacted) 
+    - enterValue
+    - getValue
+    - clear
+    - isVisible - true if both isPresent and isDisplayed
+* `makeUiSelectMultiPo` returns a protractor element that has these methods (all other Protractor methods are available and not impacted) 
+    - enterValue
+    - getValue - Gets string with all values; suggest expect(...).toContain(); 
+    - clear
+    - isVisible - true if both isPresent and isDisplayed
 * `makePos` passthrough for [ngpo](https://github.com/tonybranfort/ngpo) makePos function 
+
+**ngpo-ui-select v2.x**: requires nodejs 6.x or greater (no breaking api changes from ngpo-ui-select v1.x).  Tested with angularJs 1.5.0, angular-ui-select 0.19, Protractor 5.1.2, chromedriver 2.31. 
+
+**ngpo-ui-select v1.x**: Tested with Protractor versions 2.5 and 5.1.
 
 # Examples
 

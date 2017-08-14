@@ -1,11 +1,11 @@
 {
   "name": "ngpo-ui-select",
   "description": "ngpo-ui-select",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "",
   "private": true,
   "dependencies": {
-    "angular-ui-select": "0.12.x"
+    "angular-ui-select": "0.19.x"
   },
   "devDependencies": {
   }

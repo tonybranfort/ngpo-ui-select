@@ -1,13 +1,13 @@
 {
   "name": "ngpo-ui-select",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "AngularJS Protractor page object for angular-ui ui-select widget using ngpo template",
   "main": "lib/index.js",
   "dependencies": {
-    "ngpo": "1.0.x"
+    "ngpo": "2.2.x"
   },
   "devDependencies": {
-    "express": "4.13.x",
+    "express": "4.14.x"
   },
   "scripts": {
   },
